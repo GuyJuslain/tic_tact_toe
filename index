@@ -3,10 +3,23 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-wudth, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="stylesheet" href="styletictactoe.css">
+        <script src="script.js" defer></script> <!-- l'instruction defer permet de s'assurer que le chargement du fichier
+        script.js se fera en toute fin. et donc que le fichier se chargera à la fin pour ne pas ralentir le chargement de la page -->>
         <title>TIC_TAC_TOE Game</title>
+
     </head>
     <body>
-        
+        <div class="board" id="board"></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
     </body>
     </html>

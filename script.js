@@ -13,6 +13,8 @@ const WINNING_COMBINATIONS = [
 
 const cellElements = document.querySelectorAll('[data-cell]')
 const board = document.getElementById('board')
+const winningMessageElement = document.getElementById('winningMessage')
+const winningMessageTextElement = document.querySelector('[data-winni-message-text]')
 
 let circleTurn 
 
@@ -30,13 +32,23 @@ function handleClick(e){
     const currentClass = circleTurn ? CIRCLE_CLASS : X_CLASS
     placeMark(cell, currentClass)
     if (checkWin(currentClass)){
-        console.log('winner')
+        endGame(falde)
     }
      // Check for Win
     // check for Draw
     // Switch Turns
     swapTurns()
     setBoarHoverClass()
+}
+
+function endGame(draw){
+    if (draw) {
+
+    } else {
+        winningMessageTextElement.innerHTML = `${circleTurn ? "O' S" : 
+    "X'S"} Wins!`
+    }
+    winningMessageTextElement.classList.add('show')
 }
 
 function placeMark(cell, currentClass) {
